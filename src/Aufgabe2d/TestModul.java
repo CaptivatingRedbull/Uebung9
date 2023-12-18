@@ -10,7 +10,7 @@ public class TestModul {
         for (int i = 0; i < werte.length; i++) {
             System.out.println(werte[i] + ", ");
         }*/
-        Modul.MultiTafel multiTafel = new Modul.MultiTafel(10);
+        Modul.MultiTafel multiTafel = new Modul.MultiTafel(11);
         System.out.println(multiTafel.getInverseTafel(10));
     }
 }

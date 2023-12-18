@@ -76,12 +76,15 @@ public class Modul {
 
         public String getInverseTafel(int num){ //gibt eine Tabelle mit jeweiligen Inversen zu jedem Faktor einer MultiTafel zurück (falls vorhanden)
             String output = "";
-            int inverse = 0;
-            for(int i = 0; i < multiTafel.length; i++) {
-                output += "[ " + String.format("%" + maxFaktorLength + "s", i) + " ]  [ ";    //erste Spalte
-                inverse = getInverse(i);
-                output += String.format("%" + maxFaktorLength + "s", (inverse != -1 ? inverse : "-")) + " ]\n";
-            }
+            if(num == m) {
+                int inverse = 0;
+                for (int i = 0; i < multiTafel.length; i++) {
+                    output += "[ " + String.format("%" + maxFaktorLength + "s", i) + " ]  [ ";    //erste Spalte
+                    inverse = getInverse(i);
+                    output += String.format("%" + maxFaktorLength + "s", (inverse != -1 ? inverse : "-")) + " ]\n";
+                }
+            }else
+                return new MultiTafel(num).getInverseTafel(num);
             return output;
         }
 
