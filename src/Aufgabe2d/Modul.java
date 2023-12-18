@@ -57,7 +57,7 @@ public class Modul {
 
         public MultiTafel(int m){
             this.m = m;
-            maxFaktorLength = String.valueOf(m).length();
+            maxFaktorLength = String.valueOf(m).length();   //Formatierung
             maxRestLength = String.valueOf(m-1).length();
             multiTafel = new int[m][m];
             for(int i = 0; i < multiTafel.length; i++){
@@ -74,7 +74,7 @@ public class Modul {
             return -1;
         }
 
-        public String getInverseTafel(int num){
+        public String getInverseTafel(int num){ //gibt eine Tabelle mit jeweiligen Inversen zu jedem Faktor einer MultiTafel zurück (falls vorhanden)
             String output = "";
             int inverse = 0;
             for(int i = 0; i < multiTafel.length; i++) {
