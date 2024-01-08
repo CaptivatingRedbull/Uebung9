@@ -16,6 +16,8 @@ public class Soldat extends Mensch implements Sortierbar {
 
     @Override
     public int istGroesser(Sortierbar element) {
+        if(!(element instanceof Soldat))    //eig überflüssig
+            throw new RuntimeException("Fehlende Vergleichbarkeit");
         if (this.groesse > element.getGroesse())
             return 1;
         else if (this.groesse == element.getGroesse())
