@@ -1,7 +1,5 @@
 package Aufgabe2d;
 
-import java.awt.dnd.DragGestureEvent;
-
 public class Modul {
     private final int m;  //modul
     Rest[] reste;
